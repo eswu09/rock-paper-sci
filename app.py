@@ -108,17 +108,17 @@ def choice():
 
 @app.route("/rock.jpg")
 def rock():
-    jpg = open('rock.jpg').read()
+    jpg = open('rock.jpg', 'rb').read()
     return Response(jpg, mimetype='image/jpg')
 
 @app.route("/paper.jpg")
 def paper():
-    jpg = open('paper.jpg').read()
+    jpg = open('paper.jpg', 'rb').read()
     return Response(jpg, mimetype='image/jpg')
 
 @app.route("/scissors.jpg")
 def scissors():
-    jpg = open('scissors.jpg').read()
+    jpg = open('scissors.jpg', 'rb').read()
     return Response(jpg, mimetype='image/jpg')
 
 if __name__ == "__main__":
