@@ -1,5 +1,6 @@
 import random
 
+import os
 from flask import Flask
 from flask import Response
 
@@ -121,4 +122,4 @@ def scissors():
     return Response(jpg, mimetype='image/jpg')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=os.environ.get('PORT', 5000))
