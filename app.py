@@ -122,4 +122,6 @@ def scissors():
     return Response(jpg, mimetype='image/jpg')
 
 if __name__ == "__main__":
-    app.run(port=os.environ.get('PORT', 5000))
+    port = os.environ.get('PORT', 5000)
+    print("Serving on port", port)
+    app.run(port=port)
